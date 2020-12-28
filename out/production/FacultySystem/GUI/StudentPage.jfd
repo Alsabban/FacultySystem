@@ -1,0 +1,103 @@
+JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp panel1::l::568:x}"
+			"$verticalGroup": "par l {comp panel1::l:::x}"
+		} ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {comp panel2:::p::p, space :0:0:x}, seq l {space :p:30:p, par l:::p {comp label5::l::102:x, comp button2::t::102:x, comp button1::t::102:x, comp label3::t::102:x}, space :::x, par l {par l:t {par l {comp button3::t:p:102:p, comp button4::t:p:102:p}, comp label4:::p:102:p}, comp label6::t:p:112:p}, space :p:67:p}}"
+				"$verticalGroup": "par l {seq l {comp panel2:::p::p, space :p:32:p, par l {comp button1:::p:92:p, comp button3:::p:92:p}, space :::p, par l {comp label3:::p::p, comp label4:::p::p}, space ::87:x, par l {comp button2::t:p:92:p, comp button4::t:p:92:p}, space u:::p, par b {comp label5::b:p::p, comp label6::b:p::p}, space :p:38:p}}"
+			} ) {
+				name: "panel1"
+				"foreground": new java.awt.Color( 0, 255, 204, 255 )
+				"background": sfield java.awt.Color lightGray
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :::p, comp label1:::p:88:p, space :::p, comp label2:::p:468:p, space ::37:x}}"
+					"$verticalGroup": "par l {comp label1::::104:x, comp label2::l:::x}"
+				} ) {
+					name: "panel2"
+					"background": new java.awt.Color( 6, 96, 159, 255 )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label2"
+						"text": "Welcome Student !"
+						"foreground": new java.awt.Color( 0, 0, 0, 255 )
+						"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 5, false )
+						"background": new java.awt.Color( 0, 51, 255, 255 )
+						"horizontalAlignment": 0
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label1"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/GUI/asu scaled.png" )
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button1"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/GUI/add.png" )
+					"background": &Color0 new java.awt.Color( 255, 255, 255, 255 )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button1MouseClicked", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "button1MouseEntered", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseExited", "button1MouseExited", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button3"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/GUI/reserve.png" )
+					"background": #Color0
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button3MouseClicked", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "button3MouseEntered", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseExited", "button3MouseExited", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button4"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/GUI/course.png" )
+					"background": #Color0
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button4MouseClicked", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "button4MouseEntered", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseExited", "button4MouseExited", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label3"
+					"text": "Register Course"
+					"foreground": &Color1 new java.awt.Color( 0, 0, 0, 255 )
+					"font": &SwingDerivedFont0 new com.jformdesigner.model.SwingDerivedFont( null, 0, 2, false )
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label4"
+					"text": "View Grades"
+					"foreground": #Color1
+					"font": #SwingDerivedFont0
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label5"
+					"text": "Tuition Fees"
+					"foreground": #Color1
+					"font": #SwingDerivedFont0
+					"horizontalAlignment": 0
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button2"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/GUI/user.png" )
+					"background": #Color0
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button2MouseClicked", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "button2MouseEntered", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseExited", "button2MouseExited", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label6"
+					"text": "View Courses"
+					"foreground": #Color1
+					"font": #SwingDerivedFont0
+					"horizontalAlignment": 0
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 50, 0 )
+			"size": new java.awt.Dimension( 570, 535 )
+		} )
+	}
+}
