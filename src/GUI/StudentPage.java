@@ -36,7 +36,7 @@ public class StudentPage extends JFrame {
     }
 
     private void button2MouseClicked(MouseEvent e) {
-        JOptionPane.showMessageDialog(null, "Total Tuition Fees: " + student.getTotalFees() + "$");
+        JOptionPane.showMessageDialog(null, "Total Credit Hours: "+ student.calculateCreditHours()+ "\nTotal Tuition Fees: " + student.getTotalFees() + "$");
     }
 
     private void button4MouseClicked(MouseEvent e) {
@@ -79,6 +79,13 @@ public class StudentPage extends JFrame {
         button4.setBackground(Color.white);
     }
 
+    private void button5ActionPerformed(ActionEvent e) {
+        Login login = new Login();
+        login.setVisible(true);
+        login.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.dispose();
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         // Generated using JFormDesigner Evaluation license - 3enwanak
@@ -94,6 +101,7 @@ public class StudentPage extends JFrame {
         label5 = new JLabel();
         button2 = new JButton();
         label6 = new JLabel();
+        button5 = new JButton();
 
         //======== this ========
         var contentPane = getContentPane();
@@ -102,20 +110,21 @@ public class StudentPage extends JFrame {
         {
             panel1.setForeground(new Color(0, 255, 204));
             panel1.setBackground(Color.lightGray);
-            panel1.setBorder(new javax.swing.border.CompoundBorder(new javax.swing.border.TitledBorder(new
-            javax.swing.border.EmptyBorder(0,0,0,0), "JF\u006frmDesi\u0067ner Ev\u0061luatio\u006e",javax
-            .swing.border.TitledBorder.CENTER,javax.swing.border.TitledBorder.BOTTOM,new java
-            .awt.Font("Dialo\u0067",java.awt.Font.BOLD,12),java.awt
-            .Color.red),panel1. getBorder()));panel1. addPropertyChangeListener(new java.beans.
-            PropertyChangeListener(){@Override public void propertyChange(java.beans.PropertyChangeEvent e){if("borde\u0072".
-            equals(e.getPropertyName()))throw new RuntimeException();}});
+            panel1.setBorder ( new javax . swing. border .CompoundBorder ( new javax . swing. border .TitledBorder (
+            new javax . swing. border .EmptyBorder ( 0, 0 ,0 , 0) ,  "JFor\u006dDesi\u0067ner \u0045valu\u0061tion"
+            , javax. swing .border . TitledBorder. CENTER ,javax . swing. border .TitledBorder . BOTTOM
+            , new java. awt .Font ( "Dia\u006cog", java .awt . Font. BOLD ,12 )
+            ,java . awt. Color .red ) ,panel1. getBorder () ) ); panel1. addPropertyChangeListener(
+            new java. beans .PropertyChangeListener ( ){ @Override public void propertyChange (java . beans. PropertyChangeEvent e
+            ) { if( "bord\u0065r" .equals ( e. getPropertyName () ) )throw new RuntimeException( )
+            ;} } );
 
             //======== panel2 ========
             {
                 panel2.setBackground(new Color(6, 96, 159));
 
                 //---- label2 ----
-                label2.setText("Welcome Student !");
+                label2.setText("Welcome " + student.getName());
                 label2.setForeground(Color.black);
                 label2.setFont(label2.getFont().deriveFont(label2.getFont().getStyle() | Font.BOLD, label2.getFont().getSize() + 5f));
                 label2.setBackground(new Color(0, 51, 255));
@@ -238,6 +247,12 @@ public class StudentPage extends JFrame {
             label6.setFont(label6.getFont().deriveFont(label6.getFont().getSize() + 2f));
             label6.setHorizontalAlignment(SwingConstants.CENTER);
 
+            //---- button5 ----
+            button5.setText("Logout");
+            button5.setBackground(new Color(6, 96, 159));
+            button5.setForeground(Color.white);
+            button5.addActionListener(e -> button5ActionPerformed(e));
+
             GroupLayout panel1Layout = new GroupLayout(panel1);
             panel1.setLayout(panel1Layout);
             panel1Layout.setHorizontalGroup(
@@ -259,7 +274,10 @@ public class StudentPage extends JFrame {
                                     .addComponent(button3, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 102, GroupLayout.PREFERRED_SIZE)
                                     .addComponent(button4, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 102, GroupLayout.PREFERRED_SIZE))
                                 .addComponent(label4, GroupLayout.PREFERRED_SIZE, 102, GroupLayout.PREFERRED_SIZE))
-                            .addComponent(label6, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE))
+                            .addGroup(GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
+                                .addComponent(button5)
+                                .addGap(103, 103, 103)
+                                .addComponent(label6, GroupLayout.PREFERRED_SIZE, 112, GroupLayout.PREFERRED_SIZE)))
                         .addGap(67, 67, 67))
             );
             panel1Layout.setVerticalGroup(
@@ -279,10 +297,15 @@ public class StudentPage extends JFrame {
                             .addComponent(button2, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 92, GroupLayout.PREFERRED_SIZE)
                             .addComponent(button4, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 92, GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(panel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                            .addComponent(label5)
-                            .addComponent(label6))
-                        .addGap(38, 38, 38))
+                        .addGroup(panel1Layout.createParallelGroup()
+                            .addGroup(panel1Layout.createSequentialGroup()
+                                .addGroup(panel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                    .addComponent(label5)
+                                    .addComponent(label6))
+                                .addGap(38, 38, 38))
+                            .addGroup(GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
+                                .addComponent(button5)
+                                .addGap(15, 15, 15))))
             );
         }
 
@@ -315,5 +338,6 @@ public class StudentPage extends JFrame {
     private JLabel label5;
     private JButton button2;
     private JLabel label6;
+    private JButton button5;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

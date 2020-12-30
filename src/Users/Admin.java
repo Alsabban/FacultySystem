@@ -1,5 +1,5 @@
 package Users;
-
+import System.SystemData;
 public class Admin extends Person{
   private int ID;
   private static int counter=3001;
@@ -9,6 +9,15 @@ public class Admin extends Person{
     super(name, age, phone, email);
     this.ID=counter;
     counter++;
+    SystemData.getAdmins().add(this);
+    SystemData.logininfo.put(String.valueOf(this.ID),String.valueOf(this.ID));
+  }
+
+  public Admin() {
+    this.ID=counter;
+    counter++;
+    SystemData.getAdmins().add(this);
+    SystemData.logininfo.put(String.valueOf(this.ID),String.valueOf(this.ID));
   }
 
   public int getID() {

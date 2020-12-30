@@ -12,8 +12,9 @@ import javax.swing.plaf.synth.SynthOptionPaneUI;
 
 //import GUI.IDandPasswords;
 import System.SystemData;
+import Users.Admin;
 //import static GUI.IDandPasswords.logininfo;
-import static System.SystemData.students;
+import static System.SystemData.*;
 import static java.lang.Integer.parseInt;
 
 /**
@@ -30,15 +31,40 @@ public class Login extends JFrame {
         if(SystemData.logininfo.containsKey(userID)){
             if(SystemData.logininfo.get(userID).equals(password)) {
 
-                this.dispose();
+                this.setVisible(false);
                 if(parseInt(SystemData.logininfo.get(userID))>1000 && parseInt(SystemData.logininfo.get(userID))<2000){
-                  //  StudentWelcomePage studentWelcomePage = new StudentWelcomePage(userID);
+
                     for(int i = 0 ; i<students.size() ; i++){
                         if(students.get(i).getID() == Integer.parseInt(userID)){
 
                             StudentPage studentPage = new StudentPage(students.get(i));
                             studentPage.setVisible(true);
                             studentPage.setDefaultCloseOperation(EXIT_ON_CLOSE);
+                            break;
+                        }
+
+
+                    }
+                }else if(parseInt(SystemData.logininfo.get(userID))>2000 && parseInt(SystemData.logininfo.get(userID))<3000){
+
+                    for(int i = 0 ; i<professors.size() ; i++){
+                        if(professors.get(i).getID() == Integer.parseInt(userID)){
+
+                            ProfessorPage professorPage = new ProfessorPage(professors.get(i));
+                            professorPage.setVisible(true);
+                            professorPage.setDefaultCloseOperation(EXIT_ON_CLOSE);
+                            break;
+                        }
+
+
+                    }
+                }else if(parseInt(SystemData.logininfo.get(userID))==3001 ){
+                    for(int i = 0 ; i<admins.size() ; i++){
+                        if(admins.get(i).getID() == Integer.parseInt(userID)){
+
+                            AdminPage adminPage = new AdminPage(admins.get(i));
+                            adminPage.setVisible(true);
+                            adminPage.setDefaultCloseOperation(EXIT_ON_CLOSE);
                             break;
                         }
 
@@ -79,13 +105,13 @@ public class Login extends JFrame {
         {
             panel1.setForeground(new Color(0, 255, 204));
             panel1.setBackground(Color.lightGray);
-            panel1.setBorder (new javax. swing. border. CompoundBorder( new javax .swing .border .TitledBorder (new
-            javax. swing. border. EmptyBorder( 0, 0, 0, 0) , "JF\u006frmDes\u0069gner \u0045valua\u0074ion", javax
-            . swing. border. TitledBorder. CENTER, javax. swing. border. TitledBorder. BOTTOM, new java
-            .awt .Font ("D\u0069alog" ,java .awt .Font .BOLD ,12 ), java. awt
-            . Color. red) ,panel1. getBorder( )) ); panel1. addPropertyChangeListener (new java. beans.
-            PropertyChangeListener( ){ @Override public void propertyChange (java .beans .PropertyChangeEvent e) {if ("\u0062order" .
-            equals (e .getPropertyName () )) throw new RuntimeException( ); }} );
+            panel1.setBorder ( new javax . swing. border .CompoundBorder ( new javax . swing. border .TitledBorder ( new javax .
+            swing. border .EmptyBorder ( 0, 0 ,0 , 0) ,  "JF\u006frmD\u0065sig\u006eer \u0045val\u0075ati\u006fn" , javax. swing .border
+            . TitledBorder. CENTER ,javax . swing. border .TitledBorder . BOTTOM, new java. awt .Font ( "Dia\u006cog"
+            , java .awt . Font. BOLD ,12 ) ,java . awt. Color .red ) ,panel1. getBorder
+            () ) ); panel1. addPropertyChangeListener( new java. beans .PropertyChangeListener ( ){ @Override public void propertyChange (java
+            . beans. PropertyChangeEvent e) { if( "\u0062ord\u0065r" .equals ( e. getPropertyName () ) )throw new RuntimeException
+            ( ) ;} } );
 
             //======== panel2 ========
             {

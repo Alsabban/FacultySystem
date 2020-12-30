@@ -7,8 +7,8 @@ import java.util.ArrayList;
 
 public class Course {
     private String name;
-    private static ArrayList<Student> students = new ArrayList<Student>();
-    private static Professor professor;
+    private  ArrayList<Student> students = new ArrayList<Student>();
+    private  Professor professor;
     private int creditHours;
 
     public Course() {
@@ -25,21 +25,15 @@ public class Course {
         return name;
     }
 
-    public static ArrayList<Student> getStudents() {
+    public  ArrayList<Student> getStudents() {
         return students;
     }
 
-    public static Professor getProfessor() {
+    public  Professor getProfessor() {
         return professor;
     }
 
-    public static void setStudents(ArrayList<Student> students) {
-        Course.students = students;
-    }
 
-    public static void setProfessor(Professor professor) {
-        Course.professor = professor;
-    }
 
     public int getCreditHours() {
         return creditHours;

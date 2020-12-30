@@ -12,7 +12,17 @@ public class Professor extends Person{
     private String books[];
     private ArrayList<Course> courses = new ArrayList<Course>();
 
-    public Professor(String name,int age,String phone, String email,int gradYear, String[] awards, String[] books) {
+
+    public Professor(String name, int age, String phone, String email) {
+        super(name, age, phone, email);
+        this.ID = counter;
+        this.salary=0;
+        counter++;
+        SystemData.getProfessors().add(this);
+        SystemData.logininfo.put(String.valueOf(this.ID),String.valueOf(this.ID));
+    }
+
+    public Professor(String name, int age, String phone, String email, int gradYear, String[] awards, String[] books) {
         super(name,age,phone,email);
         this.gradYear = gradYear;
         this.awards = awards;

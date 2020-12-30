@@ -1,0 +1,101 @@
+JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {space :0:648:x};par l {comp panel1::l:::x}"
+			"$verticalGroup": "par l {space :0:528:x};par l {comp panel1::l:::x}"
+		} ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {comp panel2::l:::x, seq l {space :p:23:p, comp panel3:::p::p, space :::x}}"
+				"$verticalGroup": "par l {seq l {comp panel2:::p:104:p, space s:::p, comp panel3:::p::p, space ::31:x}}"
+			} ) {
+				name: "panel1"
+				"foreground": new java.awt.Color( 0, 255, 204, 255 )
+				"background": sfield java.awt.Color lightGray
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :::p, comp label1:::p:88:p, space :::p, comp label2:::::x}}"
+					"$verticalGroup": "par l {seq l {par l {comp label1:::p:104:p, comp label2:::::x}, space :::x}}"
+				} ) {
+					name: "panel2"
+					"background": new java.awt.Color( 6, 96, 159, 255 )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label2"
+						"text": "Register Student"
+						"foreground": new java.awt.Color( 0, 0, 0, 255 )
+						"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 5, false )
+						"background": new java.awt.Color( 0, 51, 255, 255 )
+						"horizontalAlignment": 0
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label1"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/GUI/asu scaled.png" )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :p:32:p, par t {seq {comp label5:::p:77:p, space s:::p, comp textField3:::p:456:p}, par l {seq {comp label6:::p:77:p, space s:::p, comp textField4:::p:456:p}, seq {comp label3:::p:77:p, space s:::p, comp textField1:::p:456:p}}, seq l {comp label4:::p:77:p, space s:::p, comp textField2:::p:58:p}}, space ::21:x}, seq t {space ::255:x, comp button1:::p:113:p, space :p:236:p}}"
+					"$verticalGroup": "par l {seq l {space :p:42:p, par b {comp textField1::b:p::p, comp label3::b:p:30:p}, space ::37:x, par b {comp label4::b:p:30:p, comp textField2::b:p::p}, space :p:43:p, par b {comp label5::b:p:30:p, comp textField3::b:p::p}, space :p:53:p, par b {comp label6::b:p:30:p, comp textField4::b:p::p}, space :p:29:p, comp button1:::p::p, space :p:17:p}}"
+				} ) {
+					name: "panel3"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField1"
+						"background": new java.awt.Color( 255, 255, 255, 255 )
+						"foreground": new java.awt.Color( 0, 0, 0, 255 )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label3"
+						"text": "Full Name:"
+						"foreground": &Color0 new java.awt.Color( 0, 0, 0, 255 )
+						"font": &SwingDerivedFont0 new com.jformdesigner.model.SwingDerivedFont( null, 0, 2, false )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label4"
+						"text": "Age:"
+						"foreground": #Color0
+						"font": #SwingDerivedFont0
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField2"
+						"background": new java.awt.Color( 255, 255, 255, 255 )
+						"foreground": new java.awt.Color( 0, 0, 0, 255 )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label5"
+						"text": "Phone:"
+						"foreground": #Color0
+						"font": #SwingDerivedFont0
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField3"
+						"background": new java.awt.Color( 255, 255, 255, 255 )
+						"foreground": new java.awt.Color( 0, 0, 0, 255 )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label6"
+						"text": "Email:"
+						"foreground": #Color0
+						"font": #SwingDerivedFont0
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField4"
+						"foreground": sfield java.awt.Color black
+						"background": new java.awt.Color( 255, 255, 255, 255 )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button1"
+						"text": "Register"
+						"background": new java.awt.Color( 6, 96, 159, 255 )
+						"foreground": new java.awt.Color( 255, 255, 255, 255 )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1ActionPerformed", true ) )
+					} )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 650, 560 )
+		} )
+	}
+}
